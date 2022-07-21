@@ -2,7 +2,7 @@ import Imersao_Java.controller.Connection;
 
 /* 
         get data IMDB
-        connection HTTP
+        connection HTTP (class connection)
         extract data interesting
         show and manipulate data   
     */
@@ -15,6 +15,7 @@ public class App {
 
   public static void main(String[] args) throws Exception {
     Connection conn = new Connection();
+
     conn.connection();
   }
 }
