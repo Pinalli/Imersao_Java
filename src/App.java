@@ -6,7 +6,6 @@ import Imersao_Java.controller.Connection;
         extract data interesting
         show and manipulate data   
     */
-
 /**
  * @author Alberto Rocha Pinalli
  */
