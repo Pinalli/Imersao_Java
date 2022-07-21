@@ -12,7 +12,7 @@ import java.util.Map;
 public class Connection {
 
   public void connection() throws IOException, InterruptedException {
-    String url = "https://api.mocki.io/v2/549a5d8b";
+    String url = "https://alura-filmes.herokuapp.com/conteudos";
     URI address = URI.create(url);
     var client = HttpClient.newHttpClient();
     var request = HttpRequest.newBuilder(address).GET().build();
@@ -27,10 +27,10 @@ public class Connection {
     List<Map<String, String>> lista = parser.parse(body);
 
     for (Map<String, String> filme : lista) {
-      System.out.println(filme.get("id"));
-      System.out.println(filme.get("title"));
-      System.out.println(filme.get("image"));
-      System.out.println(filme.get("imDbRating"));
+      //"\u001b[4m" + filme.get("title") + "\u001b[0m")
+      System.out.println("\u001b[4m" + filme.get("title") + "\u001b[0m");
+      System.out.println("\u001b[4m" + filme.get("image") + "\u001b[0m");
+      System.out.println("\u001b[4m" + filme.get("imDbRating") + "\u001b[0m");
     }
   }
 }
